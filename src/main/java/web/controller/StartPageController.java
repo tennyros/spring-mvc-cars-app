@@ -8,16 +8,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Controller
-public class HelloController {
+public class StartPageController {
 
 	@GetMapping(value = "/")
-	public String printWelcome(ModelMap model) {
+	public String printStartMessage(ModelMap model) {
 		List<String> strings = new ArrayList<>();
-		strings.add("Hello!");
-		strings.add("I'm Spring MVC application");
-		strings.add("5.2.0 version by sep'19 ");
+		strings.add("Starting page of");
+		strings.add("spring MVC application");
 		model.put("messages", strings);
 		return "index";
 	}
-	
 }

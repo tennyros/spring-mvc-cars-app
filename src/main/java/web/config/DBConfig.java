@@ -15,9 +15,9 @@ import javax.sql.DataSource;
 import java.util.Properties;
 
 @Configuration
-@PropertySource("classpath:db.properties")
+@PropertySource(value = "classpath:db.properties")
 @EnableTransactionManagement
-@ComponentScan(value = "web")
+@ComponentScan(basePackages = "web")
 public class DBConfig {
 
     @Value("${db.driver}")
